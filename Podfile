@@ -9,5 +9,6 @@ target 'BlessMpa' do
     pod 'Alamofire'
     pod 'AlamofireImage'
     pod 'SwiftyJSON'
-
+    pod 'Firebase/Core'
+    pod 'Firebase/Database'
 end
