@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EbK-gD-sRe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tt2-xF-cg3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,12 +23,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="161" y="77"/>
+            <point key="canvasLocation" x="-654" y="-222"/>
+        </scene>
+        <!--Loading View Controller-->
+        <scene sceneID="teW-ZN-Pun">
+            <objects>
+                <viewController id="tt2-xF-cg3" customClass="LoadingViewController" customModule="BlessMpa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0AT-nW-IWo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ver" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a36-x8-QXv">
+                                <rect key="frame" x="175.5" y="626" width="24" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.87723904283911436" blue="0.76035354318686155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5zP-xV-4f8" firstAttribute="bottom" secondItem="a36-x8-QXv" secondAttribute="bottom" constant="20" id="KYm-fu-pme"/>
+                            <constraint firstItem="a36-x8-QXv" firstAttribute="centerX" secondItem="0AT-nW-IWo" secondAttribute="centerX" id="mfI-3l-WO8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5zP-xV-4f8"/>
+                    </view>
+                    <connections>
+                        <outlet property="versionLabel" destination="a36-x8-QXv" id="koP-sz-nKe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hwa-OS-oDm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="407" y="-76"/>
         </scene>
         <!--Temple List Table View Controller-->
         <scene sceneID="WHn-7H-nsb">
             <objects>
-                <tableViewController id="EbK-gD-sRe" customClass="TempleListTableViewController" customModule="BlessMpa" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TempleList" id="EbK-gD-sRe" customClass="TempleListTableViewController" customModule="BlessMpa" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yzl-1J-5mt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,7 +93,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kjl-b6-BIe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="893.60000000000002" y="97.601199400299862"/>
+            <point key="canvasLocation" x="1199" y="70"/>
         </scene>
     </scenes>
 </document>

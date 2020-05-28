@@ -23,8 +23,8 @@ class TempleListTableViewController: UITableViewController, NSFetchedResultsCont
     override func viewDidLoad() {
         super.viewDidLoad()
 //deleteAllRecords()
-//        downloadTempleData()
-        fetchDataFromLocal()
+        downloadTempleData()
+//        fetchDataFromLocal()
       
     }
 
@@ -60,43 +60,49 @@ class TempleListTableViewController: UITableViewController, NSFetchedResultsCont
     func downloadTempleData() -> Void
     {
         var ref: DatabaseReference!
-        ref = Database.database().reference(withPath: "TempleData")
-        ref.queryOrderedByKey().observe(.value, with: { (snapshot) in
-//            var newItems: [TempleMO] = []
-            if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
-                
-            
-            }
-            for item in snapshot.children {
-                let temple = Temple(snapshot: item as! DataSnapshot)
-                
-
-                if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
-                    var templeData = TempleMO(context: appDelegate.persistentContainer.viewContext)
-                    templeData.key = temple.key
-                    templeData.name = temple.name
-                    templeData.god = temple.god
-                    templeData.type = temple.type
-                    templeData.country = temple.country
-                    templeData.address = temple.address
-                    templeData.phone = temple.phone
-                    templeData.other = temple.other
-                    templeData.posX = temple.posX
-                    templeData.posY = temple.posY
-
-                    appDelegate.saveContext()
-                    
-//                    newItems.append(templeData)
-                }
-
-
-            }
-//            self.temples = newItems
-//            self.tableView?.reloadData()
-            self.fetchDataFromLocal()
-        }) { (error) in
-            print(error.localizedDescription)
+        ref = Database.database().reference(withPath: "DataVersion")
+        ref.observe(.value, with: {(snapshot) in
+            var version = snapshot.value as! String
+            print(version)
         }
+        )
+//        ref = Database.database().reference(withPath: "TempleData")
+//        ref.queryOrderedByKey().observe(.value, with: { (snapshot) in
+////            var newItems: [TempleMO] = []
+//            if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+//
+//
+//            }
+//            for item in snapshot.children {
+//                let temple = Temple(snapshot: item as! DataSnapshot)
+//
+//
+//                if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+//                    var templeData = TempleMO(context: appDelegate.persistentContainer.viewContext)
+//                    templeData.key = temple.key
+//                    templeData.name = temple.name
+//                    templeData.god = temple.god
+//                    templeData.type = temple.type
+//                    templeData.country = temple.country
+//                    templeData.address = temple.address
+//                    templeData.phone = temple.phone
+//                    templeData.other = temple.other
+//                    templeData.posX = temple.posX
+//                    templeData.posY = temple.posY
+//
+//                    appDelegate.saveContext()
+//
+////                    newItems.append(templeData)
+//                }
+//
+//
+//            }
+////            self.temples = newItems
+////            self.tableView?.reloadData()
+//            self.fetchDataFromLocal()
+//        }) { (error) in
+//            print(error.localizedDescription)
+//        }
     }
     
     func fetchDataFromLocal()

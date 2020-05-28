@@ -12,6 +12,7 @@
 		AF4246952245F89D004952C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF4246932245F89D004952C8 /* Main.storyboard */; };
 		AF4246972245F8A4004952C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF4246962245F8A4004952C8 /* Assets.xcassets */; };
 		AF42469A2245F8A4004952C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF4246982245F8A4004952C8 /* LaunchScreen.storyboard */; };
+		AF6D70B82269CAF2008466D4 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D70B72269CAF2008466D4 /* LoadingViewController.swift */; };
 		AFC4B87A2246015E0007895C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFC4B8792246015E0007895C /* GoogleService-Info.plist */; };
 		AFC4B87D22461D360007895C /* Temple.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC4B87C22461D360007895C /* Temple.swift */; };
 		AFC4B87F224629AB0007895C /* TempleListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC4B87E224629AB0007895C /* TempleListTableViewController.swift */; };
@@ -29,6 +30,7 @@
 		AF4246962245F8A4004952C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF4246992245F8A4004952C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF42469B2245F8A4004952C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF6D70B72269CAF2008466D4 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		AFC4B8792246015E0007895C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AFC4B87C22461D360007895C /* Temple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temple.swift; sourceTree = "<group>"; };
 		AFC4B87E224629AB0007895C /* TempleListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempleListTableViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				AFC4B87B22461D250007895C /* Model */,
 				AF42468F2245F89D004952C8 /* AppDelegate.swift */,
 				AF4246912245F89D004952C8 /* ViewController.swift */,
+				AF6D70B72269CAF2008466D4 /* LoadingViewController.swift */,
 				AFC4B88022463F5F0007895C /* TempleList.xcdatamodeld */,
 				AF4246932245F89D004952C8 /* Main.storyboard */,
 				AFC4B87E224629AB0007895C /* TempleListTableViewController.swift */,
@@ -256,6 +259,7 @@
 				AF4246922245F89D004952C8 /* ViewController.swift in Sources */,
 				AF4246902245F89D004952C8 /* AppDelegate.swift in Sources */,
 				AFC4B88222463F5F0007895C /* TempleList.xcdatamodeld in Sources */,
+				AF6D70B82269CAF2008466D4 /* LoadingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
